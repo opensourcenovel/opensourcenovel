@@ -1,0 +1,120 @@
+!!!
+/[if lt IE 7 ] <html class="ie ie6" lang="en">
+/[if IE 7 ] <html class="ie ie7" lang="en">
+/[if IE 8 ] <html class="ie ie8" lang="en">
+/ [if (gte IE 9)|!(IE)]><!
+%html{:lang => "en"}
+  / <![endif]
+  %head
+    %meta{:charset => "utf-8"}
+    %title Open Source Novel // Let’s Write a Novel 
+    %meta{:content => "Open Source Novel is a collaborative writing project. Let's write a novel.", :name => "description"}
+    %meta{:content => "Nick Cox", :name => "author"}
+      
+    /Mobile Specific Metas
+    %meta{:content => "width=device-width, initial-scale=1, maximum-scale=1", :name => "viewport"}
+    
+    /CSS
+    %link{:href => "stylesheets/base.css", :rel => "stylesheet"}
+    %link{:href => "stylesheets/skeleton.css", :rel => "stylesheet"}
+    %link{:href => "stylesheets/layout.css", :rel => "stylesheet"}
+    /[if lt IE 9]
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    /
+    /Favicons
+    %link{:href => "images/favicon.ico", :rel => "shortcut icon", :type => "image/x-icon"}
+  
+    / jQuery
+    %script{:src=> '//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js', :rel => 'javascript'}
+    %script{:src=> 'javascripts/jquery.tweet.js', :rel => 'javascript'}
+    %script{:src=> 'javascripts/script.js', :rel => 'javascript'}
+
+    / Typekit
+    %script{:type => "text/javascript", :src => "//use.typekit.net/rfg1sqi.js" }
+    :javascript
+      try{Typekit.load();}catch(e){}
+  
+  %body
+    %a{ :class => 'github-ribbon', :href => 'http://github.com/opensourcenovel' }
+      %img{ :src => 'https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png', :alt => 'Fork me on github'}
+    %header
+      %h1 Let’s write a novel.
+    .button-container
+      %a{ :href => 'http://github.com/opensourcenovel'} View the Project on GitHub
+    .tagline-container
+      %h2 
+        Open Source Novel is a collaborative writing project. 
+        %br
+        Let’s use open source for more than just software. 
+    .container.body-container
+      .sixteen.columns
+        %hr/
+      .one-third.column
+        %h3 What is this? 
+        %p 
+          In November of 2006, I wrote a novel for 
+          %a{ :href => 'http://nanowrimo.org' }National Novel Writing Month.
+          in 30 days. You can read more about the story on the 
+          %a{ :href => 'http://github.com/opensourcenovel' } Open Source Novel Project Page.
+          After finishing it, I put it in a drawer for just over 6 years. 
+        %p
+          Recently, I decided to conduct an experiment: To gather a group of contributors to the novel, release it as a collective writing project, and donate the proceeds to
+          %a{ :href => 'http://www.826national.org/' } charity.
+      .one-third.column
+        %h3 Why? 
+        %p This project has several reasons for existing. Among them:
+        %ul
+          %li Some amazing things have been created through open source collaboration. If it works for code, why can’t it work for other arts?
+          %li This story, though hastily written, has promise. Through the combined efforts of strangers, this could grow into something worth contributing to and, ultimately, reading: the first open source novel ever written.
+      .one-third.column
+        %h3 What can I do? 
+        %p
+          Glad you asked. Go ahead and check out the
+          %a{ :href => 'https://github.com/opensourcenovel/opensourcenovel/issues' } issue tracker on github
+          to see what needs to be done. It is updated frequently with opportunities for contribution. Even the littlest bit helps. After all,
+          %a{ :href => 'http://twitter.com/steveklabnik' } Steve Klabnik,
+          prolific contributor to Rails, said it well:
+          %blockquote
+            Open source is just thousands upon thousands of 
+            %a{ :href => 'https://twitter.com/steveklabnik/status/294259287759413249'} little tiny pull requests. 
+
+    %footer
+      .container
+        .one-third.column
+          %h3 Links
+          %ul
+            %li
+              %a{ :href => 'http://github.com' }GitHub
+            %li
+              %a{ :href => 'http://github.com/opensourcenovel/opensourcenovel' }Open Source Novel Repository
+            %li
+              %a{ :href => 'https://help.github.com/articles/set-up-git' }Get started with git
+            %li
+              %a{ :href => 'http://nanowrimo.org' }National Novel Writing Month
+            %li
+              %a{ :href => 'http://www.amazon.com/Elements-Style-Fourth-William-Strunk/dp/020530902X'} Elements of Style (preferred style for contributions)
+        .one-third.column
+          %h3 FAQ
+          %ul
+            %li
+              %a{ :href => 'https://github.com/opensourcenovel/opensourcenovel#i-dont-have-a-github-account-how-do-i-contribute'} How do I contribute?
+            %li
+              %a{ :href => 'https://github.com/opensourcenovel/opensourcenovel#what-are-you-going-to-do-with-it'} What will be the outcome of this project?
+            %li
+              %a{ :href => 'https://github.com/opensourcenovel/opensourcenovel#what-is-the-story-about'} What is the story about?
+        .one-third.column
+          %h3 On Twitter
+          #tweet
+      .bottom
+        %p 
+          GitHub repo maintained and site designed and developed by
+          = succeed('.') do
+            %a{ :href => 'http://nickcox.me' } Nick Cox
+          %br
+          Site set in 
+          %a{ :href => 'https://typekit.com/fonts/jubilat' } Jubilat 
+          and
+          %a{ :href => 'https://typekit.com/fonts/freight-sans-pro' } Freight Sans
+          served by
+          = succeed('.') do
+            %a{ :href => 'http://typekit.com' } Typekit
