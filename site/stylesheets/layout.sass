@@ -1,0 +1,201 @@
+/* Mixins
+@mixin border-radius($tr, $br, $bl, $tl)
+  -webkit-border-radius: $tr $br $bl $tl
+  -moz-border-radius: $tr $br $bl $tl
+  -o-border-radius: $tr $br $bl $tl
+  -ms-border-radius: $tr $br $bl $tl
+  border-radius: $tr $br $bl $tl
+
+/* Colors
+$orange: #f27d27
+$green: #93d6c5
+$red: #E05F5F
+$gray: #495756
+
+/* Fonts
+$jubilat: 'jubilat', Georgia, serif
+$freight: 'freight-sans-pro', 'Helvetica Neue', Helvetica, Arial, sans-serif
+
+
+
+body
+  margin: 0 
+  padding: 0
+p, li
+  font-family: $freight
+  color: $gray - 20 
+  font-size: 18px
+  line-height: 1.3em
+  a, a:visited
+    color: $orange
+    text-decoration: none
+  a:hover
+    color: white
+    background: $orange
+.github-ribbon
+  img
+    padding: 0
+    border: 0
+    position: absolute
+    top: 0
+    right: 0
+header
+  width: 100%
+  text-align: center
+  height: 400px
+  background: $orange
+  @media screen and (max-width: 480px)
+    margin-bottom: 40px
+  h1
+    font-family: $jubilat
+    font-weight: 100
+    padding: 250px 0
+    color: #fff
+    font-size: 6em
+    line-height: 0.9
+    @media screen and (max-width: 768px)
+      padding: 150px 0
+.button-container 
+  width: 100%
+  text-align: center
+  min-height: 70px
+  a
+    +border-radius(6px, 6px, 6px, 6px)
+    font-family: $freight
+    color: #fff
+    font-weight: 700
+    text-shadow: 1px 2px 0px $green - 50
+    text-decoration: none
+    padding: 20px 60px
+    font-size: 2em
+    border: 2px solid #96c7c7
+    background-image: linear-gradient(bottom, rgb(172,228,232) 11%, rgb(147,214,197) 87%)
+    background-image: -o-linear-gradient(bottom, rgb(172,228,232) 11%, rgb(147,214,197) 87%)
+    background-image: -moz-linear-gradient(bottom, rgb(172,228,232) 11%, rgb(147,214,197) 87%)
+    background-image: -webkit-linear-gradient(bottom, rgb(172,228,232) 11%, rgb(147,214,197) 87%)
+    background-image: -ms-linear-gradient(bottom, rgb(172,228,232) 11%, rgb(147,214,197) 87%)
+    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.11, rgb(172,228,232)), color-stop(0.87, rgb(147,214,197)))
+    &:hover
+      background: $green + 10
+    @media screen and (max-width: 480px)
+      font-size: 1em
+      margin-top: 20px
+      min-height: 40px
+
+.tagline-container
+  margin-top: 60px
+  width: 100%
+  text-align: center
+  @media screen and (max-width: 480px)
+    margin-top: 20px
+  h2
+    font-family: $freight
+    font-size: 2.5em
+    line-height: 1.2
+    font-weight: 400
+    color: #464646
+    @media screen and (max-width: 768px)
+      font-size: 2em
+    @media screen and (max-width: 600px)
+      font-size: 1.7em
+
+.body-container .one-third
+  border-left: 1px solid #dcdcdc
+  h3
+    font-family: $jubilat
+    font-weight: 700
+    color: white 
+    line-height: 1
+    text-align: center
+    position: relative
+    padding: 7px 27px 7px 70px
+    background: $red
+    position: relative
+    right: 21px
+  h3:before
+    content:  ' '
+    position: absolute
+    width: 0
+    height: 0
+    right: -2px
+    top: 0px
+    border-color: transparent #fff transparent transparent
+    border-width: 15px
+  h3:after
+    content:  ''
+    position: absolute
+    width: 0
+    height: 0
+    left: 0px
+    top: 100%
+    border-width: 5px 10px
+    border-style: solid
+    border-color: ($red - 40) ($red - 40) transparent transparent
+  ul
+    margin-left: 30px
+    list-style: disc
+  p, li
+    padding-left: 7px
+
+blockquote
+  font-family: $freight
+  color: $orange
+  font-style: normal
+  font-size: 20px
+  border-left: none
+  a, a:visited
+    color: $orange
+  a:hover
+    color: $orange - 20
+
+footer
+  margin-top: 20px
+  background: $gray
+  border-top: 3px solid $gray + 15
+  h3
+    font-family: $jubilat
+    color: white 
+    margin-top: 20px
+  p
+    color: #fff
+  a, a:visited
+    color: $green
+  a:hover
+    color: white
+    background: $green
+  .container
+    margin-bottom: 50px
+  .bottom
+    text-align: center
+    width: 100%
+    padding-bottom: 15px
+
+/* jQuery tweet
+
+.tweet_list 
+  list-style: none
+  margin: 0
+  padding: 0
+  overflow-y: hidden
+
+  li 
+    overflow-y: auto
+    overflow-x: hidden
+    color: #fff
+    list-style-type: none
+    margin-bottom: 16px
+    span
+      color: #fff
+    a, a:visited
+      color: $green 
+    a:hover
+      color: white
+      background: $green
+  
+  .tweet_avatar
+    padding-right: .5em
+    float: left
+    img
+      position: relative
+      top: 6px
+
